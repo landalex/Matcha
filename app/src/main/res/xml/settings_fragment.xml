@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/settings_title_general">
+
+        <EditTextPreference android:key="user_name"
+            android:title="@string/user_name"
+            android:summary="@string/user_name_description"/>
+
+        <EditTextPreference android:key="user_department"
+            android:title="@string/user_department"
+            android:summary="@string/user_department_description"/>
+
+        <EditTextPreference android:key="user_role"
+            android:title="@string/user_role"
+            android:summary="@string/user_role_description"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
