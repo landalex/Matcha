@@ -7,6 +7,10 @@
             android:title="@string/user_name"
             android:summary="@string/user_name_description"/>
 
+        <EditTextPreference android:key="user_email"
+            android:title="@string/user_email"
+            android:summary="@string/user_email_description"/>
+
         <EditTextPreference android:key="user_department"
             android:title="@string/user_department"
             android:summary="@string/user_department_description"/>
@@ -14,6 +18,15 @@
         <EditTextPreference android:key="user_role"
             android:title="@string/user_role"
             android:summary="@string/user_role_description"/>
+
+        <EditTextPreference android:key="user_ama"
+            android:title="@string/user_ama"
+            android:summary="@string/user_ama_description"/>
+
+        <ListPreference android:key="user_location"
+            android:title="@string/user_location"
+            android:summary="@string/user_location_description"/>
+
 
     </PreferenceCategory>
 

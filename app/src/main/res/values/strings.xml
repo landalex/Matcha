@@ -15,4 +15,10 @@
     <string name="user_department_description">Your department within SAP</string>
     <string name="user_role">Title</string>
     <string name="user_role_description">Your role within SAP</string>
+    <string name="user_email">Email</string>
+    <string name="user_email_description">Your SAP email</string>
+    <string name="user_ama">Ask Me About</string>
+    <string name="user_ama_description">Topics you want to talk about</string>
+    <string name="user_location">Location</string>
+    <string name="user_location_description">Which office are you based in?</string>
 </resources>

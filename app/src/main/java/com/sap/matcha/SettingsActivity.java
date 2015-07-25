@@ -31,4 +31,9 @@ public class SettingsActivity extends PreferenceActivity {
 
     }
 
+    @Override
+    public void onDestroy() {
+
+    }
+
 }

@@ -4,6 +4,8 @@ import android.app.AlertDialog;
 import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -17,13 +19,18 @@ import java.util.Calendar;
 
 
 public class MainActivity extends ActionBarActivity {
+    private static final String SHARED_PREFERENCES = "Matcha_Preferences";
+    private static final String FIRST_RUN = "first_run";
     private static int hour = Calendar.getInstance().get(Calendar.HOUR);
     private static int minute = Calendar.getInstance().get(Calendar.MINUTE);
+    private MySQLiteHelper dbHelper = new MySQLiteHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        onFirstRun();
 
         TimePickerDialog.OnTimeSetListener listener = new TimePickerDialog.OnTimeSetListener() {
             @Override
@@ -42,6 +49,19 @@ public class MainActivity extends ActionBarActivity {
                 dialog.show();
             }
         });
+    }
+
+    private void onFirstRun() {
+        SharedPreferences settings = getSharedPreferences(SHARED_PREFERENCES,  MODE_PRIVATE);
+        if (settings.getBoolean(FIRST_RUN, true)) {
+            SharedPreferences.Editor editor = settings.edit();
+            editor.putBoolean(FIRST_RUN, false);
+            editor.commit();
+
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
+            dbHelper.onCreate(db, MySQLiteHelper.TABLE_EMPLOYEE);
+            dbHelper.onCreate(db, MySQLiteHelper.TABLE_REQUEST);
+        }
     }
 
 
