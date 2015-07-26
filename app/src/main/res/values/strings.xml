@@ -21,4 +21,26 @@
     <string name="user_ama_description">Topics you want to talk about</string>
     <string name="user_location">Location</string>
     <string name="user_location_description">Which office are you based in?</string>
+    <string-array name="list_user_locations">
+        <item>Vancouver</item>
+    </string-array>
+    <string-array name="list_user_locations_values">
+        <item>Vancouver</item>
+    </string-array>
+    <string name="title_activity_setting">SettingActivity</string>
+
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="main_activity_decline">No</string>
+    <string name="main_activity_decline_message">Darn! Next time.</string>
+    <string name="main_activity_decline_button">Got it.</string>
+    <string name="main_activity_accept">Yes</string>
+    <string name="main_activity_match_found">Matcha!</string>
+    <string name="main_activity_match_found_body">Are you still free?</string>
+    <string name="profile_activity_match_info">Hello! I\'ll be in the lobby in 5 mins. See you!</string>
+    <string name="profile_activity_button_call">Call</string>
+    <string name="profile_activity_button_text">Text</string>
 </resources>

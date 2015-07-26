@@ -25,8 +25,11 @@
 
         <ListPreference android:key="user_location"
             android:title="@string/user_location"
-            android:summary="@string/user_location_description"/>
-
+            android:summary="@string/user_location_description"
+            android:entries="@array/list_user_locations"
+            android:entryValues="@array/list_user_locations_values"
+            android:dialogTitle="@string/user_location">
+        </ListPreference>
 
     </PreferenceCategory>
 
